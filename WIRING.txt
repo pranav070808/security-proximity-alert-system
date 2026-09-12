@@ -1,0 +1,15 @@
+SECURITY PROXIMITY ALERT SYSTEM - WIRING
+
+HC-SR04
+VCC  -> Arduino 5V
+GND  -> Arduino GND
+TRIG -> Arduino D9
+ECHO -> Arduino D10
+
+LED
+D7 -> 220 ohm resistor -> LED anode (+)
+LED cathode (-) -> GND
+
+BUZZER
+Buzzer (+) -> D8
+Buzzer (-) -> GND

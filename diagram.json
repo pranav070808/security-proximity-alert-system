@@ -1,0 +1,110 @@
+{
+  "version": 1,
+  "author": "Pranav",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-arduino-uno",
+      "id": "uno",
+      "top": 20,
+      "left": 20,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "ultrasonic",
+      "top": 20,
+      "left": 300,
+      "attrs": {
+        "distance": "80"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led",
+      "top": 220,
+      "left": 330,
+      "attrs": {
+        "color": "red"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "resistor",
+      "top": 220,
+      "left": 250,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "buzzer",
+      "top": 300,
+      "left": 300,
+      "attrs": {
+        "volume": "0.5"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "ultrasonic:VCC",
+      "uno:5V",
+      "red",
+      []
+    ],
+    [
+      "ultrasonic:GND",
+      "uno:GND.1",
+      "black",
+      []
+    ],
+    [
+      "ultrasonic:TRIG",
+      "uno:9",
+      "green",
+      []
+    ],
+    [
+      "ultrasonic:ECHO",
+      "uno:10",
+      "blue",
+      []
+    ],
+    [
+      "uno:7",
+      "resistor:1",
+      "green",
+      []
+    ],
+    [
+      "resistor:2",
+      "led:A",
+      "green",
+      []
+    ],
+    [
+      "led:C",
+      "uno:GND.1",
+      "black",
+      []
+    ],
+    [
+      "buzzer:2",
+      "uno:8",
+      "green",
+      []
+    ],
+    [
+      "buzzer:1",
+      "uno:GND.1",
+      "black",
+      []
+    ]
+  ],
+  "serialMonitor": {
+    "display": "always",
+    "newline": "lf"
+  }
+}
