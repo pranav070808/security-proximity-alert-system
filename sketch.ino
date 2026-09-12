@@ -1,21 +1,3 @@
-/*
-  Security Proximity Alert System
-  IEEE RAS VITC - Task 2
-
-  Hardware:
-  - Arduino Uno
-  - HC-SR04 ultrasonic distance sensor
-  - Red LED + 220 ohm resistor
-  - Piezo buzzer
-
-  Behaviour:
-  - Measures distance continuously.
-  - If an object is at or below ALERT_DISTANCE_CM,
-    the LED turns on and the buzzer sounds.
-  - Otherwise, the alert is off.
-  - Distance is displayed on the Serial Monitor.
-*/
-
 const int TRIG_PIN = 9;
 const int ECHO_PIN = 10;
 
